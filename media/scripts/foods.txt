@@ -1,0 +1,57 @@
+module Base
+{
+    item MountainDew
+        {
+            DisplayCategory = Food,
+                HungerChange = -10,
+                Weight = 0.4,
+                AlwaysWelcomeGift = TRUE,
+                Type = Food,
+                UnhappyChange = -99,
+                ThirstChange = -99,
+                DisplayName = Mountain Dew,
+                Icon = MountainDew,
+                CustomContextMenu = Drink,
+                CustomEatSound = DrinkingFromCan,
+                Carbohydrates = 41.3,
+                ReplaceOnUse = MountainDewEmpty,
+                Proteins = 0,
+                Lipids = 0,
+                Calories = 165,
+                Packaged = TRUE,
+                CantBeFrozen = TRUE,
+                StaticModel = PopBottle,
+                EatType = popcan,
+                WorldStaticModel = EmptyPopBottle
+        }
+
+    item MountainDewEmpty
+    {
+        DisplayCategory = WaterContainer,
+		Weight	=	0.1,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Mountain Dew Can,
+		ReplaceOnUseOn	=	WaterSource-WaterPopBottle,
+		Icon	=	PopBottleEmpty,
+		MetalValue = 5,
+		WorldStaticModel = EmptyPopBottle,
+    }
+
+    item HeinzBakedBeans
+    {
+        DisplayCategory = Food,
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Heinz Baked Beans,
+		Icon	=	HeinzBakedBeans,
+        Carbohydrates = 53.5,
+        Proteins = 19.5,
+        Lipids = 0.8,
+        Calories = 334.1,
+        Packaged = TRUE,
+        StaticModel = CanClosed,
+        CannedFood = TRUE,
+        WorldStaticModel = CanClosed,
+    }
+}
