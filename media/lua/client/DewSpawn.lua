@@ -12,9 +12,11 @@ end
 local function giveItem()
     if debugItems then
         local player = getSpecificPlayer(0);
-        player.getInventory().AddItem("MountainDew");
+        local inv = player:getInventory();
+        inv:AddItem("Base.MountainDew");
     end
 end
 
 Events.OnGameBoot.Add(Info);
 Events.OnGameStart.Add(giveItem);
+Events.OnKeyPressed.Add(giveItem);
